@@ -10,3 +10,6 @@
 <button [disabled]="!allowNewServer" class="btn btn-primary" (click)="onCreateServer()">Add Server</button>
 <h3>{{serverCreationStatus}}</h3>
 <p [innerText]="allowNewServer"></p>
+
+<input type="text" class="form-control" placeholder="Please enter username" [(ngModel)]="username">
+<button class="btn btn-primary" (click)="resetUsername()" [disabled]="username===''">Reset User</button>
